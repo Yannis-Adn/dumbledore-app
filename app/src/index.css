@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #7B9AC4;
+  --color-primary-light: #A8BDD8;
+  --color-primary-dark: #6085AD;
+  --color-surface: #F0EBE3;
+  --color-surface-dim: #E3DACC;
+  --color-surface-dark: #141413;
+  --color-surface-dark-dim: #1C1C1A;
+  --color-border: #D4CAB9;
+  --color-border-dark: #2D2D29;
+  --color-text: #3A3630;
+  --color-text-muted: #8B8178;
+  --color-text-dark: #E5DDD1;
+  --color-text-dark-muted: #877F73;
+  --color-accent: #7B9AC4;
+  --color-accent-light: #A8BDD8;
+  --color-success: #8BBF9F;
+  --color-warning: #E2B866;
+  --color-danger: #CD7B72;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+
+  --animate-modal-in: modal-in 0.15s ease-out;
+
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Landing page — constellation animations */
+@keyframes landing-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-7px) scale(0.97); }
+}
+
+@keyframes landing-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.15; }
+  50% { transform: scale(1.12); opacity: 0.3; }
+}
+
+@keyframes landing-vortex {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes landing-stream {
+  from { stroke-dashoffset: 26; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes landing-center-glow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(123, 154, 196, 0.1); }
+  50% { box-shadow: 0 4px 30px rgba(123, 154, 196, 0.25), 0 0 60px rgba(123, 154, 196, 0.1); }
+}
+
+@keyframes landing-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(100%); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@layer base {
+  body {
+    @apply bg-surface-dim text-text antialiased font-sans;
+  }
+
+  .dark body {
+    @apply bg-surface-dark text-text-dark;
+  }
+
+  /* Scrollbar for Gantt */
+  .gantt-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(138, 128, 112, 0.2) transparent;
+  }
+
+  .gantt-scroll::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .gantt-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .gantt-scroll::-webkit-scrollbar-thumb {
+    background: rgba(138, 128, 112, 0.2);
+    border-radius: 3px;
+  }
+
+  .gantt-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(138, 128, 112, 0.35);
+  }
+
+  .dark .gantt-scroll {
+    scrollbar-color: rgba(229, 221, 209, 0.1) transparent;
+  }
+
+  .dark .gantt-scroll::-webkit-scrollbar-thumb {
+    background: rgba(229, 221, 209, 0.1);
+  }
+
+  .dark .gantt-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(229, 221, 209, 0.2);
+  }
+}

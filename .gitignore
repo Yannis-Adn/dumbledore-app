@@ -1,0 +1,30 @@
+node_modules/
+dist/
+
+# Local tool configs
+.playwright-mcp/
+.mcp.json
+.claude/
+CLAUDE.md
+.cursor/
+.copilot/
+.aider*
+.windsurf/
+*.code-workspace
+.vscode/
+.idea/
+
+# Environment & secrets
+.env
+.deploy.env
+*.pem
+*.key
+
+# Build artifacts & temp files
+*.har
+*.zip
+*.png
+!app/public/dumbledore-icon.png
+!app/src/assets/icons/*.png
+parse-har*.cjs
+/calendrier-*.json

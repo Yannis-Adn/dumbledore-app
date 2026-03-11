@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Dumbledore Token Sync</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="logo">🧙‍♂️</span>
+      <div>
+        <h1>Dumbledore</h1>
+        <p class="subtitle">Token Sync</p>
+      </div>
+    </header>
+
+    <section class="tokens">
+      <div class="token-row" id="row-moodle">
+        <div class="token-info">
+          <span class="token-dot" id="dot-moodle"></span>
+          <span class="token-name">MoodleSession</span>
+        </div>
+        <span class="token-badge" id="badge-moodle">—</span>
+      </div>
+      <div class="token-row" id="row-panoramix">
+        <div class="token-info">
+          <span class="token-dot" id="dot-panoramix"></span>
+          <span class="token-name">Panoramix</span>
+        </div>
+        <span class="token-badge" id="badge-panoramix">—</span>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button class="btn primary" id="btn-sync">⟳ Sync maintenant</button>
+      <div class="links">
+        <a href="https://gandalf.epitech.eu" target="_blank" class="link" id="link-gandalf">
+          Ouvrir Gandalf ↗
+        </a>
+        <a href="https://panoramix.epitest.eu" target="_blank" class="link" id="link-panoramix">
+          Ouvrir Panoramix ↗
+        </a>
+      </div>
+    </section>
+
+    <p class="hint" id="hint">
+      Ouvre Gandalf et Panoramix pour capturer tes tokens automatiquement.
+    </p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

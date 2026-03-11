@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Dumbledore Token Sync",
+  "version": "1.0.0",
+  "description": "Auto-capture MoodleSession and Panoramix tokens and inject them into Dumbledore.",
+
+  "permissions": ["cookies", "storage", "tabs", "scripting", "notifications"],
+
+  "host_permissions": [
+    "https://gandalf.epitech.eu/*",
+    "https://panoramix.epitest.eu/*",
+    "http://localhost/*",
+    "https://localhost/*",
+    "https://dumbledore-pi.vercel.app/*",
+    "https://dumbledore.epitech.bzh/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://gandalf.epitech.eu/*"],
+      "js": ["content/gandalf.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://panoramix.epitest.eu/*"],
+      "js": ["content/panoramix.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["http://localhost/*", "https://localhost/*", "https://dumbledore-pi.vercel.app/*", "https://dumbledore.epitech.bzh/*"],
+      "js": ["content/dumbledore.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Dumbledore Token Sync"
+  }
+}

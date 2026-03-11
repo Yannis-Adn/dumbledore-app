@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Wizard hat -->
+  <polygon points="32,4 14,48 50,48" fill="#6d28d9"/>
+  <rect x="10" y="48" width="44" height="8" rx="4" fill="#7c3aed"/>
+  <!-- Star on hat -->
+  <polygon points="32,14 33.5,19 38,19 34.5,22 35.8,27 32,24 28.2,27 29.5,22 26,19 30.5,19" fill="#fbbf24"/>
+</svg>

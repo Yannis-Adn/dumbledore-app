@@ -1,0 +1,36 @@
+{
+  "entries": [
+    {
+      "id": "2026-03-06-demo",
+      "date": "2026-03-06",
+      "title": "Mode Demo",
+      "description": "Pour explorer Dumbledore sans avoir besoin de tokens Moodle ou Panoramix. Pour decouvrir l'interface et ses fonctionnalites avant de se connecter.",
+      "tag": "new",
+      "icon": "flask"
+    },
+    {
+      "id": "2026-03-06-homepage",
+      "date": "2026-03-06",
+      "title": "Nouvelle Homepage",
+      "description": "Meilleures animations sur la login page",
+      "tag": "improvement",
+      "icon": "layout"
+    },
+    {
+      "id": "2026-03-06-themes",
+      "date": "2026-03-06",
+      "title": "Choix de Theme",
+      "description": "Personnalisez l'apparence de Dumbledore avec le systeme de themes. Changez les couleurs de l'interface selon vos preferences.",
+      "tag": "new",
+      "icon": "palette"
+    },
+    {
+      "id": "2026-03-06-push",
+      "date": "2026-03-06",
+      "title": "Notifications Push Mobile",
+      "description": "Pour recevoir des rappels de deadlines et events Panoramix (FU...)",
+      "tag": "new",
+      "icon": "bell"
+    }
+  ]
+}

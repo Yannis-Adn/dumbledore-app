@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "agentation": "^2.2.1",
+    "agentation-mcp": "^1.2.0"
+  }
+}
