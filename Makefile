@@ -70,10 +70,31 @@ deploy:
 setup:
 	./setup.sh
 
+# Sync code to public GitHub repo (without deploying)
+sync-public:
+	@SCRIPT_DIR="$$(pwd)"; \
+	PUBLIC_REPO="git@github.com:Yannis-Adn/dumbledore-app.git"; \
+	SYNC_DIR=$$(mktemp -d); \
+	trap "rm -rf '$$SYNC_DIR'" EXIT; \
+	echo "==> Cloning public repo..."; \
+	git clone --depth 1 "$$PUBLIC_REPO" "$$SYNC_DIR" 2>/dev/null; \
+	(cd "$$SYNC_DIR" && git rm -rf . > /dev/null 2>&1) || true; \
+	git archive HEAD | tar -x -C "$$SYNC_DIR"; \
+	rm -f "$$SYNC_DIR/.deploy.env" "$$SYNC_DIR/.mcp.json"; \
+	rm -rf "$$SYNC_DIR/.claude"; \
+	(cd "$$SYNC_DIR" && git add -A); \
+	if (cd "$$SYNC_DIR" && git diff --cached --quiet); then \
+		echo "    Public repo already up to date."; \
+	else \
+		(cd "$$SYNC_DIR" && git commit -m "Sync $$(git -C "$$SCRIPT_DIR" log -1 --format='%h — %s')"); \
+		(cd "$$SYNC_DIR" && git push origin main); \
+		echo "    Public repo updated."; \
+	fi
+
 # ── Extensions ──────────────────────────────────────────────
 
 # Package browser extensions
 pack-extensions:
 	cd app && npm run pack-extensions
 
-.PHONY: dev build lint typecheck install up up-quick up-build reup down logs logs-svc restart clean deploy setup pack-extensions
+.PHONY: dev build lint typecheck install up up-quick up-build reup down logs logs-svc restart clean deploy setup sync-public pack-extensions
