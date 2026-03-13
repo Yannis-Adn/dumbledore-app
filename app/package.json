@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "bash ../scripts/pack-extensions.sh && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "pack-extensions": "bash ../scripts/pack-extensions.sh",
