@@ -70,6 +70,16 @@ export default function Layout() {
           </NavLink>
 
           <div className="flex items-center gap-2">
+            <a
+              href="https://app.edsquare.fr/users/sign_in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-1.5 rounded-xl hover:bg-surface-dim dark:hover:bg-surface-dark transition-colors"
+              title="Edsquare"
+            >
+              <img src="/edsquare-logo.png" alt="Edsquare" className="h-4" />
+            </a>
+
             <Changelog isDemo={isDemo} />
 
             <button

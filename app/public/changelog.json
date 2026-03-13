@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "id": "2026-03-13-edsquare",
+      "date": "2026-03-13",
+      "title": "Acces rapide Edsquare",
+      "description": "Un lien direct vers Edsquare est maintenant disponible dans la barre de navigation.",
+      "tag": "new"
+    },
+    {
+      "id": "2026-03-13-planning-premsc",
+      "date": "2026-03-13",
+      "title": "Planning Pre-MSC",
+      "description": "Le planning Pre-MSC 2026 est maintenant disponible dans la section Planning avec toutes les dates importantes.",
+      "tag": "new"
+    },
+    {
       "id": "2026-03-06-demo",
       "date": "2026-03-06",
       "title": "Mode Demo",

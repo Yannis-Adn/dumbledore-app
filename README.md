@@ -1,7 +1,7 @@
 # Dumbledore
 
-Frontend moderne pour les plateformes **Gandalf** (Moodle) et **Panoramix** (calendrier) d'Epitech.
-Les utilisateurs collent leur cookie `MoodleSession` et leur JWT `Panoramix` pour s'authentifier. Pas de compte, pas de backend d'auth.
+Frontend moderne pour les plateformes **Gandalf** (Moodle) et **Panoramix** (calendrier) d'Epitech, avec **notifications push mobiles** (deadlines, nouveaux projets) et **récupération automatique des tokens** via l'extension navigateur.
+Les utilisateurs collent leur cookie `MoodleSession` et leur JWT `Panoramix` pour s'authentifier (ou laissent l'extension le faire). Pas de compte, pas de backend d'auth.
 
 ## Stack
 

@@ -4,6 +4,7 @@ import { GandalfAPI, type UserProfile } from '@/lib/gandalf-api';
 import { PanoramixAPI } from '@/lib/panoramix-api';
 import { DemoGandalfAPI, DemoPanoramixAPI, DEMO_USER } from '@/lib/demo-api';
 import { TokenExpiredError, NetworkError } from '@/lib/errors';
+import { setCurriculum } from '@/lib/planning';
 import { useToast } from '@/context/toast';
 
 interface AuthState {
@@ -102,6 +103,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       } catch {
         // Non-blocking — curriculum is a nice-to-have
       }
+
+      setCurriculum(curriculum);
 
       localStorage.setItem(STORAGE_KEY, token);
       localStorage.setItem(PANORAMIX_STORAGE_KEY, panoramixToken);

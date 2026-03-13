@@ -25,6 +25,7 @@ CLAUDE.md
 *.zip
 *.png
 !app/public/dumbledore-icon.png
+!app/public/edsquare-logo.png
 !app/src/assets/icons/*.png
 parse-har*.cjs
 /calendrier-*.json
