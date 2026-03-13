@@ -234,19 +234,15 @@ export default function Login() {
               <p className="text-sm text-text-muted dark:text-text-dark-muted mt-1">
                 Gandalf, Panoramix, and more — in one modern interface.
               </p>
-              <div className="relative inline-flex mt-3 group">
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-1.5 text-xs text-text-muted dark:text-text-dark-muted hover:text-primary transition-colors"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <Github className="w-3.5 h-3.5" />
-                  Contribute
-                </a>
-                <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] bg-surface-dark dark:bg-surface text-text-dark dark:text-text px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap">
-                  Soon
-                </span>
-              </div>
+              <a
+                href="https://github.com/Yannis-Adn/dumbledore-app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs text-text-muted dark:text-text-dark-muted hover:text-primary transition-colors mt-3"
+              >
+                <Github className="w-3.5 h-3.5" />
+                Contribute on GitHub
+              </a>
             </div>
           </div>
 
