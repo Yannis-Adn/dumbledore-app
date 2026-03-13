@@ -410,8 +410,8 @@ export default function PushNotifications() {
                 <p className="text-xs text-text-muted dark:text-text-dark-muted">
                   {enabled
                     ? isDemo
-                      ? 'Le code de demonstration est affiche ci-dessus. Copie-le avec le bouton.'
-                      : 'Ton code personnel est affiche ci-dessus. Copie-le avec le bouton.'
+                      ? 'Le code de demonstration est affiche ci-dessus.'
+                      : 'Ton code personnel est affiche ci-dessus.'
                     : 'Active d\'abord les notifications ci-dessus pour obtenir ton code.'}
                 </p>
               </div>
@@ -427,7 +427,7 @@ export default function PushNotifications() {
                   Abonne-toi dans ntfy
                 </p>
                 <p className="text-xs text-text-muted dark:text-text-dark-muted">
-                  Ouvre l'app ntfy, appuie sur "+" et colle le code pour t'abonner au canal.
+                  Ouvre l'app ntfy, appuie sur "+" et mets le code pour t'abonner au canal.
                 </p>
               </div>
             </div>
